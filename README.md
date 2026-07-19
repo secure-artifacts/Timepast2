@@ -4,12 +4,25 @@ TimePast is a local-first Windows desktop productivity app for time entries, sma
 
 ## Install
 
-Download the latest Windows installer from the GitHub Releases page and run:
+Download the latest Windows installer from the GitHub Releases page:
 
 - `TimePast_0.1.0_x64-setup.exe` for the standard installer
 - `TimePast_0.1.0_x64_en-US.msi` for MSI deployment
 
 All app data is stored locally on the user's machine.
+
+## Verify Software Origin
+
+Release assets are built and uploaded by GitHub Actions. After downloading an
+installer, verify its provenance with GitHub CLI:
+
+```bash
+gh attestation verify ./TimePast_0.1.0_x64-setup.exe --repo secure-artifacts/Timepast
+gh attestation verify ./TimePast_0.1.0_x64_en-US.msi --repo secure-artifacts/Timepast
+```
+
+Successful verification means the installer was produced by the official CI
+workflow for this repository.
 
 ## Development
 
