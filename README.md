@@ -17,8 +17,8 @@ Release assets are built and uploaded by GitHub Actions. After downloading an
 installer, verify its provenance with GitHub CLI:
 
 ```bash
-gh attestation verify ./TimePast_0.1.1_x64-setup.exe --repo secure-artifacts/Timepast
-gh attestation verify ./TimePast_0.1.1_x64_en-US.msi --repo secure-artifacts/Timepast
+gh attestation verify ./TimePast_0.1.1_x64-setup.exe --repo cg202601/Timepast
+gh attestation verify ./TimePast_0.1.1_x64_en-US.msi --repo cg202601/Timepast
 ```
 
 Successful verification means the installer was produced by the official CI
