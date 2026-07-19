@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.1.1 - 2026-07-19
+
+### Fixed
+- Updated the release workflow to publish installers through GitHub Actions with build provenance attestations.
+- Bumped installer metadata for a clean trusted release tag.
+
 ## v0.1.0 - 2026-07-19
 
 ### Added
