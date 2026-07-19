@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.1.2 - 2026-07-20
+
+### Changed
+- Published a clean organization release for secure-artifacts/Timepast2 with repository-specific provenance verification docs.
+
 ## v0.1.1 - 2026-07-19
 
 ### Fixed
