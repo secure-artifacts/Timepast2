@@ -1,0 +1,42 @@
+﻿import { format, parseISO } from "date-fns";
+import type { TimeEntry } from "./types";
+
+export function todayDate(): string {
+  return format(new Date(), "yyyy-MM-dd");
+}
+
+export function currentTime(): string {
+  return format(new Date(), "HH:mm");
+}
+
+export function isoToDateInput(value: string): string {
+  return format(parseISO(value), "yyyy-MM-dd");
+}
+
+export function isoToTimeInput(value: string): string {
+  return format(parseISO(value), "HH:mm");
+}
+
+export function copyTextForEntry(entry: TimeEntry): string {
+  const note = entry.note.trim();
+  return `${entry.startTime}-${entry.endTime} ${entry.eventName}${note ? ` - ${note}` : ""}`;
+}
+
+export function minutesBetween(start: string, end: string): number {
+  const [sh, sm] = start.split(":").map(Number);
+  const [eh, em] = end.split(":").map(Number);
+  return eh * 60 + em - (sh * 60 + sm);
+}
+
+export function formatDuration(minutes: number): string {
+  if (minutes < 60) return `${minutes} 分钟`;
+  const h = Math.floor(minutes / 60);
+  const m = minutes % 60;
+  return m ? `${h} 小时 ${m} 分钟` : `${h} 小时`;
+}
+
+export function secondsToClock(total: number): string {
+  const minutes = Math.floor(total / 60).toString().padStart(2, "0");
+  const seconds = Math.max(0, total % 60).toString().padStart(2, "0");
+  return `${minutes}:${seconds}`;
+}
