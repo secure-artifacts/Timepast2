@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.1.3 - 2026-07-20
+
+### Fixed
+- Published a new patch tag because v0.1.2 has no corresponding GitHub Actions release in the organization repository.
+- Prepared the organization repository for a clean GitHub Actions release.
+
 ## v0.1.2 - 2026-07-20
 
 ### Changed
